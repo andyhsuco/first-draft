@@ -1,0 +1,196 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100vh; /* Full viewport height */
+      box-sizing: border-box; /* Include padding in the height */
+    }
+
+    .editable-title {
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+      width: 60%; /* Match the text area width */
+    }
+
+    .top-controls {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    #noDeleteEditor {
+      width: 60%; /* 60% of the viewport width */
+      min-height: calc(100vh - 60px); /* Adjust height calculation to include padding and controls */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      outline: none;
+      resize: none; /* Disable resizing */
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      border-top: none; /* Removes top border */
+      margin-top: 0; /* Removes space above the textarea */
+      width: 60%; /* Make sure this matches the width of the top-bar */
+      /* Other styles as necessary */
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+    .toggle-label {
+  margin-right: 10px; /* Adjust this value as needed */
+}
+
+/* Add any additional styling as needed */
+
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+
+   /* Add styles for the top bar */
+   .top-bar {
+    width: 60%;
+    max-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none; /* Removes bottom border */
+    margin-bottom: 0; /* Removes space below the top-bar */
+    width: 60%; /* Adjust this value as needed */
+    background-color: gray;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+  }
+
+  .word-count {
+
+}
+
+  .copy-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white; /* Ensure the button text is also white */
+    /* Add more styling as needed */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Style for the copy icon, adjust as needed */
+  .copy-icon {
+    font-size: 16px;
+
+    /* If you have specific styles for a line-style icon, add them here */
+  }
+  
+
+  .copy-button svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Add more styling as needed */
+    color:white;
+  }
+  
+
+  .top-bar, #noDeleteEditor {
+    box-sizing: border-box; /* Includes padding and border in the width */
+    width: 60%; /* Adjust based on your layout */
+    /* other shared styles */
+    padding-left:12px;
+    padding-left:12px;
+  }
+
+  .copy-button .check-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Other styles as needed */
+  }
+  
+  .copy-button .copy-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Other styles as needed */
+  }
+  
